@@ -42,7 +42,7 @@ Qual das seguintes alternativas melhor descreve o que o código faz?
 
 A) O código avalia a expressão booleana, imprime o resultado `false`, calcula a soma dos números de 1 a 5 e imprime o resultado no console.
 
-B) O código avalia a expressão booleana, imprime o resultado `true`, calcula a soma dos números de 1 a 5 e imprime o resultado no console.
+~~B) O código avalia a expressão booleana, imprime o resultado `true`, calcula a soma dos números de 1 a 5 e imprime o resultado no console.~~ **[CORRETO]**
 
 C) O código avalia a expressão booleana, imprime o resultado `true` e verifica se o número 5 está presente na lista de números.
 
@@ -137,7 +137,7 @@ B) O código verifica se o número é par ou ímpar. Se for par, exibe a mensage
 
 C) O código verifica se o número é par, ímpar ou divisível por 3. Se for par, exibe a mensagem "O número é par!". Se for divisível por 3, exibe a mensagem "O número é divisível por 3!". Se for ímpar, exibe a mensagem "O número é ímpar e não é divisível por 3!".
 
-D) O código verifica se o número é par, se é divisível por 3 ou se é ímpar. Se for par, exibe a mensagem "O número é par!". Se for divisível por 3 (e não for par), exibe a mensagem "O número é divisível por 3!". Se for ímpar (e não for divisível por 3), exibe a mensagem "O número é ímpar e não é divisível por 3!".
+~~D) O código verifica se o número é par, se é divisível por 3 ou se é ímpar. Se for par, exibe a mensagem "O número é par!". Se for divisível por 3 (e não for par), exibe a mensagem "O número é divisível por 3!". Se for ímpar (e não for divisível por 3), exibe a mensagem "O número é ímpar e não é divisível por 3!".~~ **[CORRETO]**
 
 
 ______
@@ -201,17 +201,17 @@ Compra 3 aprovada. Saldo restante: 400
 Compra 4 negada. Saldo insuficiente e limite de crédito excedido.
 
 
-D)
+D) **[CORRETO]**
 
-Compra 1 aprovada. Saldo restante: 800
+~~Compra 1 aprovada. Saldo restante: 800~~
 
-Compra 2 aprovada. Saldo restante: 0
+~~Compra 2 aprovada. Saldo restante: 0~~
 
-Compra 3 aprovada com limite de crédito. Saldo restante: 200
+~~Compra 3 aprovada com limite de crédito. Saldo restante: 200~~
 
-Compra 4 negada. Saldo insuficiente e limite de crédito excedido.
+~~Compra 4 negada. Saldo insuficiente e limite de crédito excedido.~~
 
-Compra 5 negada. Saldo insuficiente e limite de crédito excedido.
+~~Compra 5 negada. Saldo insuficiente e limite de crédito excedido.~~
 
 ______
 
@@ -221,7 +221,7 @@ Escolha a opção que responde corretamente:
 
 A) Setup -> Update -> Draw
 
-B) Preload -> Create -> Update
+~~B) Preload -> Create -> Update~~ **[CORRETO]**
 
 C) Load -> Initialize -> Render
 
@@ -234,7 +234,7 @@ Escolha a opção que responde corretamente:
 
 A) Renderizar gráficos 3D para jogos em HTML5.
 
-B) Simular interações físicas realistas, como colisões e movimentos, em jogos 2D.
+~~B) Simular interações físicas realistas, como colisões e movimentos, em jogos 2D.~~ **[CORRETO]**
 
 C) Criar efeitos de áudio para melhorar a experiência do usuário em jogos.
 
@@ -246,6 +246,23 @@ ______
 
 **7)** Implemente o pseudocódigo para o algoritmo representado no fluxograma da imagem.
 ![Uma imagem](assets/image.png)
+
+```
+programa questao7
+
+INICIO
+
+idade = prompt("insira sua idade")
+    se idade < 16:
+        true(Não pode votar)
+    senao
+        false(idade >= 16 & < 18):
+            se true:
+                ("voto facultativo")
+            senao false
+                ("voto obrigatório")
+FIM
+ ```
 ______
 
 **8)** Considere a implementação da classe base FormaGeometrica em um sistema de modelagem de formas geométricas. Sua tarefa é implementar, utilizando pseudocódigo, as classes derivadas Retangulo e Circulo, que herdam da classe FormaGeometrica, adicionando atributos específicos e métodos para calcular a área de um retângulo e de um círculo, respectivamente.
@@ -261,12 +278,71 @@ Classe FormaGeometrica:
     Método CalcularArea():
         # Implementação genérica para cálculo de área, a ser sobrescrita pelas subclasses.
 
+Classe Retangulo:
+        Atributos:
+            -altura
+            -largura
+        Método Construtor(altura. largura):
+        Método AreaRetangulo(altura * largura)
+    Imprima(AreaRetangulo)
+        
+    Classe Circulo:
+        Atributos:
+            -Pi
+            -raio
+        Método Construtor(Pi, raio):
+        Método AreaCirculo(Pi * (raio)^2)
+    Imprima(AreaCirculo)
+
+
 ```
 
 ______
 
 **9)** Você foi contratado(a) como estagiário(a) da Tesla e está participando do desenvolvimento de um programa para simular o desempenho de um carro elétrico em uma corrida. Seu objetivo é determinar em quantos minutos o carro levará para completar uma determinada distância, levando em consideração uma velocidade inicial e uma taxa de aceleração constante. No entanto, você deseja garantir que o carro não exceda uma velocidade máxima nem que a corrida demore mais do que um tempo máximo. Implemente a lógica dessa simulação em pseudocódigo.
+```
+Função simularCorrida(distancia, velocidadeInicial, aceleracao, velocidadeMaxima, tempoMaximo):
+    // Variáveis de controle
+    tempo = 0
+    velocidade = velocidadeInicial
 
+    // Enquanto a distância não for percorrida e o tempo máximo não for atingido
+    Enquanto distancia > 0 e tempo < tempoMaximo:
+        // Atualizar a velocidade de acordo com a aceleração
+        velocidade = velocidade + aceleracao * tempo
+
+        // Verificar se a velocidade ultrapassa a velocidade máxima permitida
+        Se velocidade > velocidadeMaxima:
+            velocidade = velocidadeMaxima
+
+        // Calcular o tempo necessário para percorrer a próxima distância
+        tempoParaPercorrer = distancia / velocidade
+
+        // Verificar se o tempo para percorrer a próxima distância ultrapassa o tempo máximo
+        Se tempo + tempoParaPercorrer > tempoMaximo:
+            // Se ultrapassar, ajustar o tempo para o máximo possível
+            tempoParaPercorrer = tempoMaximo - tempo
+            // Calcular a distância percorrida nesse tempo máximo
+            distanciaPercorrida = velocidade * tempoParaPercorrer
+            // Atualizar a distância restante
+            distancia = distancia - distanciaPercorrida
+            // Atualizar o tempo
+            tempo = tempo + tempoParaPercorrer
+            // Sair do loop
+            Interromper enquanto
+        Senão:
+            // Atualizar a distância restante
+            distancia = distancia - distanciaPercorrida
+            // Atualizar o tempo
+            tempo = tempo + tempoParaPercorrer
+
+    // Converter o tempo total de segundos para minutos
+    tempoEmMinutos = tempo / 60
+    
+    // Retornar o tempo total da simulação em minutos
+    Retornar tempoEmMinutos
+
+```
 
 
 ______
