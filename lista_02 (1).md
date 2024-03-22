@@ -104,7 +104,7 @@ function calculaOrcamento2(){
 
 Escolha a opção que responde corretamente qual seria a saída após a execução de cada função:
 
-A) As funções calcularOrcamento() e calcularOrcamento2() teriam a mesma saída: 'Seu saldo é negativo de -1050.'
+~~A) As funções calcularOrcamento() e calcularOrcamento2() teriam a mesma saída: 'Seu saldo é negativo de -1050.'~~ **[CORRETO]**
 
 B) A saída de calcularOrcamento() seria: 'Seu saldo é negativo de -1050.' e a de calcularOrcamento2() seria: 'Seu saldo é negativo de -100.'
 
@@ -269,32 +269,22 @@ ______
 
 ```
 Classe FormaGeometrica:
+Classe Retangulo (herda de FormaGeometrica):
     Atributos:
-        - cor
+        - base (real): representa a base do retângulo.
+        - altura (real): representa a altura do retângulo.
 
-    Método Construtor(cor):
-        Define o valor do atributo cor com o valor passado como parâmetro.
+    Métodos:
+        - Construtor Retangulo(base, altura): inicializa os atributos base e altura.
+        - CalcularArea(): retorna a área do retângulo, calculada como base * altura.
 
-    Método CalcularArea():
-        # Implementação genérica para cálculo de área, a ser sobrescrita pelas subclasses.
+Classe Circulo (herda de FormaGeometrica):
+    Atributos:
+        - raio (real): representa o raio do círculo.
 
-Classe Retangulo:
-        Atributos:
-            -altura
-            -largura
-        Método Construtor(altura. largura):
-        Método AreaRetangulo(altura * largura)
-    Imprima(AreaRetangulo)
-        
-    Classe Circulo:
-        Atributos:
-            -Pi
-            -raio
-        Método Construtor(Pi, raio):
-        Método AreaCirculo(Pi * (raio)^2)
-    Imprima(AreaCirculo)
-
-
+    Métodos:
+        - Construtor Circulo(raio): inicializa o atributo raio.
+        - CalcularArea(): retorna a área do círculo, calculada como π * raio^2.
 ```
 
 ______
@@ -374,3 +364,35 @@ matrizSoma <- SomaDeMatrizes(matrizA, matrizB)
 Escrever("Soma das matrizes:")
 ImprimirMatriz(matrizSoma)
 ```
+
+```
+Função MultiplicacaoDeMatrizes(matrizA, matrizB):
+    # Verifica se as matrizes podem ser multiplicadas
+    Se número de colunas de matrizA ≠ número de linhas de matrizB então:
+        Retornar "As matrizes não podem ser multiplicadas. O número de colunas de matrizA não coincide com o número de linhas de matrizB."
+
+    linhasA <- tamanho(matrizA)
+    colunasA <- tamanho(matrizA[0])
+    colunasB <- tamanho(matrizB[0])
+
+    matrizResultado <- novaMatriz(linhasA, colunasB)
+
+    # Loop para percorrer cada elemento da matriz resultado
+    Para i de 0 até linhasA-1 faça:
+        Para j de 0 até colunasB-1 faça:
+            elemento <- 0
+            # Loop para calcular o elemento na posição (i, j) da matriz resultado
+            Para k de 0 até colunasA-1 faça:
+                elemento <- elemento + matrizA[i][k] * matrizB[k][j]
+            matrizResultado[i][j] <- elemento
+
+    Retornar matrizResultado
+
+matrizA <- [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+matrizB <- [[9, 8, 7], [6, 5, 4], [3, 2, 1]]
+
+matrizProduto <- MultiplicacaoDeMatrizes(matrizA, matrizB)
+Escrever("Produto das matrizes:")
+ImprimirMatriz(matrizProduto)
+```
+
